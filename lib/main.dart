@@ -1,3 +1,4 @@
+import 'package:coffee_ui/screens/homscreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,24 +10,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomeScreen(),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+      primarySwatch: Colors.orange),
 
     );
-    
-  }
-}
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
-
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
     
   }
 }
